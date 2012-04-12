@@ -1,0 +1,17 @@
+<h1>New User</h1>
+
+<%=  form_for @user do |f| %>
+    <p>
+      <%= f.label :first_name %>
+      <%= f.text_field :first_name %>
+      <%= @user.errors[:first_name].join(', ') %>
+    </p>
+    <p>
+      <%= f.label :last_name %>
+      <%= f.text_field :last_name %>
+      <%= @user.errors[:last_name].join(', ') %>
+    </p>
+    <p>
+      <%= f.submit 'Submit' %>
+    </p>
+<% end %>

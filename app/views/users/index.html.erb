@@ -1,0 +1,11 @@
+<h1>Users</h1>
+
+<p>
+<% @users.each do |user| %>
+  <%= link_to "#{user.first_name} #{user.last_name}", edit_user_path(user) %><br />
+<% end %>
+</p>
+
+<p>
+  <%= link_to 'Create New User', new_user_path %>
+</p>
